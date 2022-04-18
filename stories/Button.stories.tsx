@@ -5,11 +5,16 @@ import { Meta, Story } from '@storybook/react';
 const meta: Meta = {
   title: 'Button',
   component: Button,
+  argTypes: {
+    children: {
+      defaultValue: 'Default Text',
+    },
+  },
 };
 
 export default meta;
 
-const Template: Story<Props> = (args) => <Button {...args}></Button>;
+const Template: Story<Props> = (args) => <Button {...args} />;
 
 export const Default = Template.bind({});
 
